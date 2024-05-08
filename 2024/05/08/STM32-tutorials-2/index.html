@@ -18,27 +18,24 @@
     var CONFIG = {"hostname":"mzx2023628.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="STM32是ST公司基于ARM Cortex-M内核开发的32位微控制器微控制器（Microcontroller Unit，即MCU）">
+  <meta name="description" content="目前STM32的开发方式主要有基于寄存器的方式，基于标准库（库函数）的方式，基于HAL库的方式使用库函数的方式，需要准备STM32库函数的压缩包新建一个基于标准库的工程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="STM32 tutorials 1">
-<meta property="og:url" content="https://mzx2023628.github.io/2024/05/07/STM32-tutorials/index.html">
+<meta property="og:title" content="STM32 tutorials 2">
+<meta property="og:url" content="https://mzx2023628.github.io/2024/05/08/STM32-tutorials-2/index.html">
 <meta property="og:site_name" content="Mzx&#39;s blog">
-<meta property="og:description" content="STM32是ST公司基于ARM Cortex-M内核开发的32位微控制器微控制器（Microcontroller Unit，即MCU）">
+<meta property="og:description" content="目前STM32的开发方式主要有基于寄存器的方式，基于标准库（库函数）的方式，基于HAL库的方式使用库函数的方式，需要准备STM32库函数的压缩包新建一个基于标准库的工程">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://mzx2023628.github.io/images/stm32-1.png">
-<meta property="og:image" content="https://mzx2023628.github.io/images/stm32-2.png">
-<meta property="og:image" content="https://mzx2023628.github.io/images/stm32-3.png">
-<meta property="og:image" content="https://mzx2023628.github.io/images/stm32-4.png">
-<meta property="og:image" content="https://mzx2023628.github.io/images/stm32-5.png">
-<meta property="og:image" content="https://mzx2023628.github.io/images/stm32-6.png">
-<meta property="og:image" content="https://mzx2023628.github.io/images/stm32-7.png">
-<meta property="article:published_time" content="2024-05-07T07:34:23.000Z">
-<meta property="article:modified_time" content="2024-05-07T07:58:11.389Z">
+<meta property="og:image" content="https://mzx2023628.github.io/images/stm32-12.png">
+<meta property="og:image" content="https://mzx2023628.github.io/images/stm32-11.png">
+<meta property="og:image" content="https://mzx2023628.github.io/images/stm32-13.png">
+<meta property="og:image" content="https://mzx2023628.github.io/images/stm32-14.png">
+<meta property="article:published_time" content="2024-05-08T03:20:54.000Z">
+<meta property="article:modified_time" content="2024-05-08T05:33:27.834Z">
 <meta property="article:author" content="Mzx">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://mzx2023628.github.io/images/stm32-1.png">
+<meta name="twitter:image" content="https://mzx2023628.github.io/images/stm32-12.png">
 
-<link rel="canonical" href="https://mzx2023628.github.io/2024/05/07/STM32-tutorials/">
+<link rel="canonical" href="https://mzx2023628.github.io/2024/05/08/STM32-tutorials-2/">
 
 
 <script id="page-configurations">
@@ -51,7 +48,7 @@
   };
 </script>
 
-  <title>STM32 tutorials 1 | Mzx's blog</title>
+  <title>STM32 tutorials 2 | Mzx's blog</title>
   
 
 
@@ -161,7 +158,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mzx2023628.github.io/2024/05/07/STM32-tutorials/">
+    <link itemprop="mainEntityOfPage" href="https://mzx2023628.github.io/2024/05/08/STM32-tutorials-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -174,7 +171,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          STM32 tutorials 1
+          STM32 tutorials 2
         </h1>
 
         <div class="post-meta">
@@ -185,7 +182,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2024-05-07 15:34:23 / 修改时间：15:58:11" itemprop="dateCreated datePublished" datetime="2024-05-07T15:34:23+08:00">2024-05-07</time>
+              <time title="创建时间：2024-05-08 11:20:54 / 修改时间：13:33:27" itemprop="dateCreated datePublished" datetime="2024-05-08T11:20:54+08:00">2024-05-08</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -208,29 +205,44 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>STM32是ST公司基于ARM Cortex-M内核开发的32位微控制器<br>微控制器（Microcontroller Unit，即MCU）</p>
+        <p>目前STM32的开发方式主要有基于寄存器的方式，基于标准库（库函数）的方式，基于HAL库的方式<br>使用库函数的方式，需要准备STM32库函数的压缩包<br>新建一个基于标准库的工程 </p>
 <span id="more"></span>
 
+<ul>
+<li><p>新建一个文件夹，用来放STM32Project</p>
+</li>
+<li><p>打开Keil5软件，点击Proje，New uVision Project，再文件夹里新建一个文件夹，用来放本次工程，选择STM32F103C8，会弹出一个新建工程小助手，这个可以帮助我们快速新建工程，叉掉，工程就建好了，但是不能直接用</p>
+</li>
+<li><p>添加工程必要文件  </p>
+<ol>
+<li><p>打开固件库的文件夹，打开Libraries，CMSIS，CM3，DeviceSupport，ST，STM32F10x，startup，arm，里面是STM32的启动文件，STM32的程序从启动文件开始执行，复制，回到你创建的文件夹，新建Start文件夹，粘贴</p>
+</li>
+<li><p>再回到STM32F10x文件夹，看到stm32f10x.h（外设寄存器描述文件，描述STM32有哪些寄存器和它对应的地址） 和 两个system开头的文件（配置时钟的），复制，粘贴到Start里，因为STM32是内核和内核外围的设备组成，还需要添加一个内核寄存器的描述文件，打开CM3，CoreSupport，这两个cm3文件就是内核寄存器描述，复制粘贴到Start，工程必要文件复制完成</p>
+</li>
+<li><p>回到Keil5，把刚才复制的文件添加到工程里，文件图标带一个小钥匙，表示只读，最好添加头文件路径，再工程文件夹，创建User文件夹，在keil5工程里添加，新建main.c,在main.c里右键插入头文件，文件最后一行必须是空行，不然会报警</p>
 <blockquote>
-<p><img src="/../images/stm32-1.png" alt="图片">  </p>
+<p><img src="/../images/stm32-12.png" alt="图片">  </p>
 </blockquote>
+</li>
+<li><p>这个工程目前还没有添加STM32的库函数，所有还只是一个基于寄存器开发的工程（点击扳手工具，修改字体大小，编码格式选成UTF8，tab键大小），配置调试器（点击魔术棒，选择Debug，选择STlink，点击旁边设置，勾选Reset and Run，下载程序立马复位）</p>
+</li>
+<li><p>在工程文件夹，新建一个文件夹Library，用来存放库函数，打开固件库文件夹，打开Libraries，STM32标准外设驱动，src，里面是库函数源文件（misc是内核库函数，其他是外设库函数），全复制，在你的Library下粘贴，打开固件库inc文件，复制粘贴到你的Library，接着回到keil软件，添加组，加进去，对于这个库函数来说，现在还不能直接使用，还需要添加一个文件</p>
+</li>
+<li><p>打开固件库文件夹，打开Project,STM32Template,可以看到stm32f10x_conf.h和两个it结尾的文件，conf.h文件是用来配置库函数头文件的包含关系的，两个it文件是用来存放中断函数的，复制粘贴到User目录下，回到Keil，在User组里把这三个文件添加进来，最后还需要一个宏定义，在main.c头文件位置右键，打开文件，在下面位置找到语句，复制字符串，在魔术棒的C\C++的Define栏目粘贴这个字符串，这样才能包含标准外设库（库函数），头文件路径也要加上</p>
 <blockquote>
-<p><img src="/../images/stm32-2.png" alt="图片"></p>
+<p><img src="/../images/stm32-11.png" alt="图片"></p>
 </blockquote>
+</li>
+</ol>
+</li>
+<li><p>这样基于库函数的工程就建好了</p>
 <blockquote>
-<p><img src="/../images/stm32-3.png" alt="图片"></p>
+<p><img src="/../images/stm32-13.png" alt="图片"></p>
 </blockquote>
+</li>
+</ul>
 <blockquote>
-<p><img src="/../images/stm32-4.png" alt="图片"></p>
-</blockquote>
-<blockquote>
-<p><img src="/../images/stm32-5.png" alt="图片"></p>
-</blockquote>
-<blockquote>
-<p><img src="/../images/stm32-6.png" alt="图片"></p>
-</blockquote>
-<blockquote>
-<p><img src="/../images/stm32-7.png" alt="图片"></p>
+<p><img src="/../images/stm32-14.png" alt="图片"> </p>
 </blockquote>
 
     </div>
@@ -247,8 +259,8 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2024/04/30/%E9%A6%96%E9%A1%B5/" rel="prev" title="首页">
-      <i class="fa fa-chevron-left"></i> 首页
+    <a href="/2024/05/07/STM32-tutorials-1/" rel="prev" title="STM32 tutorials 1">
+      <i class="fa fa-chevron-left"></i> STM32 tutorials 1
     </a></div>
       <div class="post-nav-item"></div>
     </div>
@@ -322,7 +334,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
